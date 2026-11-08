@@ -1,0 +1,79 @@
+# Checks and tests the frontend, then pushes its image to Docker Hub.
+#   Pull requests:     check and test only, nothing pushed
+#   Push to main:      <user>/branch-appointments-frontend:latest and :sha-<short sha>
+#   Tag v1.2.3:        :1.2.3, :1.2 and :sha-<short sha>
+# Repository settings: variable DOCKERHUB_USERNAME, secret DOCKERHUB_TOKEN (a Docker Hub access token with read and
+# write access, not the account password).
+name: Frontend image
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # The fallback keeps the name valid where the variable is not visible (pull requests from forks), which never push
+  IMAGE: ${{ vars.DOCKERHUB_USERNAME || 'unset' }}/branch-appointments-frontend
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      # Lint, translations, the API contract check and the production build; then the unit tests. The image is built
+      # from source below, only once these pass.
+      - name: Check and build
+        run: npm run build
+      - name: Unit tests
+        run: npm test
+
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Image tags
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha,prefix=sha-
+
+      - name: Sign in to Docker Hub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

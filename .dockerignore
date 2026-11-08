@@ -1,0 +1,10 @@
+# The image is built from these only (see Dockerfile)
+*
+!package.json
+!package-lock.json
+!angular.json
+!tsconfig.json
+!tsconfig.app.json
+!public/
+!src/
+!nginx/

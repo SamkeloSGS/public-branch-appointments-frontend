@@ -1,0 +1,153 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+
+  // White theme: Material 3 tints every surface with the primary hue; use white and neutral greys instead, keeping
+  // blue for actions and the selected state. All screens read these system tokens, so this restyles the whole app.
+  @include mat.theme-overrides(
+    (
+      background: #ffffff,
+      surface: #ffffff,
+      surface-bright: #ffffff,
+      surface-dim: #e9eaec,
+      surface-container-lowest: #ffffff,
+      surface-container-low: #f8f9fa,
+      surface-container: #f3f4f6,
+      surface-container-high: #eceef1,
+      surface-container-highest: #e4e6ea,
+      surface-variant: #eceef1,
+      outline: #80868b,
+      outline-variant: #dde0e4,
+    )
+  );
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
+/* You can add global styles to this file, and also import other style files */
+
+// Page layout shared by both areas
+.page {
+  box-sizing: border-box;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.page.narrow {
+  max-width: 44rem;
+}
+
+h1 {
+  font: var(--mat-sys-headline-small);
+  margin: 0.5rem 0 1rem;
+}
+
+h2 {
+  font: var(--mat-sys-title-large);
+}
+
+a {
+  color: var(--mat-sys-primary);
+}
+
+// Keyboard users can jump past the header (WCAG 2.4.1)
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: var(--mat-sys-corner-small);
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// The customer area works at phone width without horizontal scrolling (spec 4.6)
+html,
+body {
+  overflow-x: hidden;
+}
+
+// Icons keep their size next to long text in flex rows
+.mat-icon {
+  flex-shrink: 0;
+}
+
+// "Back to ..." link above a detail page: a text button whose label lines up with the page content
+.back-link.mat-mdc-button {
+  margin: 0 0 0.25rem -0.75rem;
+}
+
+// Data tables on the admin screens: plain semantic tables, scrolling sideways on narrow screens
+.table-scroll {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: var(--mat-sys-body-medium);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+.admin-table th {
+  font: var(--mat-sys-title-small);
+  color: var(--mat-sys-on-surface-variant);
+  background: var(--mat-sys-surface-container-low);
+}
+
+.admin-table tbody tr:hover {
+  background: var(--mat-sys-surface-container-lowest);
+}

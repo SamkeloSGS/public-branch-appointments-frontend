@@ -1,0 +1,570 @@
+{
+  "app": {
+    "name": "Book an appointment",
+    "navigation": "Main",
+    "nav": {
+      "book": "Book",
+      "myAppointments": "My appointments",
+      "profile": "Profile",
+      "admin": "Admin",
+      "branch": "Our branch"
+    },
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "menu": "Menu",
+    "footer": {
+      "links": "Footer links",
+      "copyright": "© {{year}} {{name}}. All rights reserved."
+    }
+  },
+  "common": {
+    "loading": "Loading…",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "home": "Go to the home page",
+    "skipToContent": "Skip to content",
+    "timesIn": "Times are shown in the branch's time zone: {{zone}}",
+    "typeToConfirm": "Type {{word}} to confirm",
+    "showMore": "Show more",
+    "shownOf": "Showing {{shown}} of {{total}}",
+    "notAllowed": {
+      "title": "Not allowed",
+      "body": "You don't have access to this page. If you think you should, contact your administrator."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "body": "We couldn't find that page."
+    },
+    "back": "Back"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "We couldn't reach the server. Check your connection and try again.",
+    "invalid": "Some of the details aren't valid. Check them and try again.",
+    "signInRequired": "Please sign in to continue.",
+    "forbidden": "You don't have access to this.",
+    "notFound": "We couldn't find what you were looking for.",
+    "conflict": "That can't be done right now.",
+    "stale": "This record was changed by someone else. The latest version has been loaded.",
+    "staleKept": "This record was changed elsewhere. The latest version has been loaded and your changes are still here: review them and save again."
+  },
+  "validation": {
+    "required": "Required",
+    "tooLong": "Too long",
+    "email": "Enter a valid email address",
+    "phone": "Enter a valid phone number",
+    "invalid": "Not valid"
+  },
+  "days": {
+    "MONDAY": "Monday",
+    "TUESDAY": "Tuesday",
+    "WEDNESDAY": "Wednesday",
+    "THURSDAY": "Thursday",
+    "FRIDAY": "Friday",
+    "SATURDAY": "Saturday",
+    "SUNDAY": "Sunday"
+  },
+  "segments": {
+    "PERSONAL": "Personal",
+    "BUSINESS": "Business"
+  },
+  "languages": {
+    "en": "English",
+    "af": "Afrikaans",
+    "zu": "isiZulu",
+    "xh": "isiXhosa",
+    "st": "Sesotho"
+  },
+  "branchManagement": {
+    "openingHours": "Opening hours",
+    "closed": "Closed",
+    "services": "Services",
+    "noServices": "This branch isn't taking bookings online at the moment.",
+    "minutes": "{{minutes}} min",
+    "book": "Book",
+    "bookService": "Book {{service}}",
+    "detailTitle": "Branch",
+    "bookAppointment": "Book an appointment",
+    "serviceCount": "{{n}} services",
+    "map": {
+      "heading": "Find us",
+      "title": "Map showing {{branch}}",
+      "directions": "Get directions"
+    },
+    "prerequisites": {
+      "title": "What to bring"
+    }
+  },
+  "booking": {
+    "title": "Book an appointment",
+    "reference": "Booking {{reference}}",
+    "change": "Change",
+    "changeStep": "Change {{step}}",
+    "steps": {
+      "label": "Booking steps",
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "confirm": "Confirm"
+    },
+    "service": {
+      "title": "What do you need help with?",
+      "search": "Search services",
+      "none": "No services match your search."
+    },
+    "date": {
+      "title": "Choose a date",
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month",
+      "noneThisMonth": "No open days this month. Try the next month.",
+      "unavailable": "no open times"
+    },
+    "time": {
+      "title": "Choose a time on {{date}}",
+      "available": "Available times",
+      "none": "There are no open times on this day.",
+      "otherDate": "Choose another date"
+    },
+    "confirm": {
+      "title": "Confirm your booking",
+      "signInNeeded": "Sign in or create an account to book. Your choices will be kept.",
+      "signIn": "Sign in to book",
+      "submit": "Confirm booking"
+    },
+    "summary": {
+      "service": "Service",
+      "branch": "Branch",
+      "date": "Date",
+      "time": "Time"
+    },
+    "status": {
+      "BOOKED": "Booked",
+      "CHECKED_IN": "Checked in",
+      "COMPLETED": "Completed",
+      "NO_SHOW": "Missed",
+      "REBOOKING_REQUIRED": "Needs a new time",
+      "CANCELLED": "Cancelled"
+    },
+    "rebooking": {
+      "notice": "The branch can no longer see you at this time.",
+      "explain": "The branch can no longer see you at this time. Please choose a new time.",
+      "choose": "Choose a new time"
+    },
+    "mine": {
+      "title": "My appointments",
+      "upcoming": "Upcoming",
+      "past": "Past",
+      "bookNew": "Book an appointment",
+      "details": "Details",
+      "detailsFor": "Details of booking {{reference}}",
+      "none": {
+        "upcoming": "You have no upcoming appointments.",
+        "past": "You have no past appointments."
+      }
+    },
+    "detail": {
+      "booked": "You're booked. Your booking reference is {{reference}}.",
+      "reschedule": "Reschedule",
+      "cancel": "Cancel appointment",
+      "keep": "Keep appointment",
+      "cancelTitle": "Cancel this appointment?",
+      "cancelConfirm": "Booking {{reference}} will be cancelled. This can't be undone.",
+      "cancelled": "Your appointment has been cancelled.",
+      "rescheduled": "Your appointment has been moved.",
+      "chooseNewTime": "Choose a new time",
+      "back": "Back to my appointments",
+      "saving": "Saving…"
+    },
+    "errors": {
+      "SLOT_UNAVAILABLE": "That time was just taken. Here are the times still open.",
+      "OUTSIDE_BOOKING_WINDOW": "That time can't be booked online. Choose a different time.",
+      "OFFERING_UNAVAILABLE": "This branch isn't taking bookings for that service right now.",
+      "CUSTOMER_INACTIVE": "Your account can't make bookings. Contact the branch.",
+      "OVERLAPPING_APPOINTMENT": "You already have an appointment at that time.",
+      "TOO_MANY_APPOINTMENTS": "You've reached the limit of upcoming appointments.",
+      "PAST_CUTOFF": "It's too late to change this appointment online. Contact the branch.",
+      "INVALID_STATE": "This appointment has changed. Reloading."
+    }
+  },
+  "customer": {
+    "setup": {
+      "title": "Your details",
+      "intro": "Before your first booking, tell us who you are and how to reach you.",
+      "submit": "Save and continue"
+    },
+    "profile": {
+      "title": "Profile",
+      "details": "Your details",
+      "saveDetails": "Save details",
+      "saved": "Saved."
+    },
+    "fields": {
+      "givenName": "First name",
+      "familyName": "Last name",
+      "email": "Email",
+      "phone": "Mobile number",
+      "language": "Language for messages",
+      "contactHint": "Give at least an email address or a mobile number, so we can send you confirmations and reminders."
+    },
+    "validation": {
+      "contactRequired": "Give an email address or a mobile number"
+    },
+    "preferences": {
+      "title": "How we contact you",
+      "channels": "Send confirmations and reminders by",
+      "email": "Email",
+      "sms": "SMS",
+      "last": "This is your only channel, so it can't be switched off. Switch on another one first.",
+      "noContact": "Add this contact detail above to switch it on.",
+      "save": "Save preferences"
+    },
+    "erase": {
+      "title": "Erase my data",
+      "explain": "Permanently remove your name and contact details. Your upcoming appointments will be cancelled.",
+      "warning": "This removes your name and contact details and cancels all your upcoming appointments. It can't be undone. You'll be signed out afterwards.",
+      "word": "ERASE",
+      "start": "Erase my data",
+      "confirm": "Erase my data",
+      "done": "Your data has been erased."
+    },
+    "errors": {
+      "CONTACT_REQUIRED": "Give an email address or a mobile number.",
+      "CHANNEL_WITHOUT_CONTACT": "A channel can only be switched on when you have given that contact detail.",
+      "NO_CHANNEL_ENABLED": "Keep at least one way for us to contact you.",
+      "INVALID_STATE": "Your profile can't be changed right now.",
+      "PROFILE_EXISTS": "You already have a profile.",
+      "EMAIL_IN_USE": "These contact details can't be used. Try different ones.",
+      "CONTACT_DETAILS_UNAVAILABLE": "These contact details can't be used. Try different ones."
+    }
+  },
+  "admin": {
+    "title": "Appointments admin",
+    "navigation": "Admin",
+    "customerSite": "Customer site",
+    "home": {
+      "title": "Admin",
+      "welcome": "Signed in as {{name}}."
+    },
+    "sections": {
+      "day": "Day list",
+      "book": "Book for a customer",
+      "customers": "Customers",
+      "notifications": "Failed notifications",
+      "hours": "Weekly hours",
+      "capacity": "Capacity",
+      "calendar": "Calendar",
+      "overbooked": "Overbooked days",
+      "services": "Service catalog",
+      "staff": "Staff",
+      "appointment": "Appointment"
+    },
+    "save": "Save",
+    "saved": "Saved.",
+    "edit": "Edit",
+    "remove": "Remove",
+    "actions": {
+      "checkIn": "Check in",
+      "complete": "Complete",
+      "noShow": "No-show",
+      "reschedule": "Reschedule",
+      "cancel": "Cancel"
+    },
+    "done": {
+      "checkIn": "Checked in.",
+      "complete": "Completed.",
+      "noShow": "Marked as a no-show.",
+      "cancel": "Appointment cancelled.",
+      "reschedule": "Appointment moved.",
+      "displace": "Booking {{reference}} needs a new time; the customer is told."
+    },
+    "confirm": {
+      "cancel": {
+        "title": "Cancel this appointment?",
+        "message": "Booking {{reference}} for {{customer}} will be cancelled and the customer told. This can't be undone."
+      },
+      "noShow": {
+        "title": "Record a no-show?",
+        "message": "Booking {{reference}} for {{customer}} will be closed as a no-show."
+      },
+      "displace": {
+        "title": "Move this appointment out?",
+        "message": "Booking {{reference}} will need a new time. The customer is asked to choose one; until then it doesn't count against capacity."
+      }
+    },
+    "day": {
+      "date": "Date",
+      "previous": "Previous day",
+      "next": "Next day",
+      "today": "Today",
+      "reference": "Booking reference",
+      "find": "Find booking",
+      "none": "No appointments on this day.",
+      "caption": "Appointments on {{date}}",
+      "time": "Time",
+      "customer": "Customer",
+      "service": "Service",
+      "status": "Status",
+      "actions": "Actions",
+      "unknownCustomer": "Customer details unavailable"
+    },
+    "appointment": {
+      "back": "Back to the day list",
+      "bookedBy": {
+        "CUSTOMER": "Booked online by the customer",
+        "STAFF": "Booked by staff"
+      }
+    },
+    "book": {
+      "customer": "Customer",
+      "findCustomer": "Find the customer",
+      "newCustomer": "New customer",
+      "createCustomer": "Create customer",
+      "existing": "A customer with this email already exists: {{name}}.",
+      "useExisting": "Use this customer"
+    },
+    "customers": {
+      "search": "Name, email or mobile number",
+      "searchHint": "At least {{n}} characters",
+      "results": "Customers found",
+      "none": "No customers match.",
+      "choose": "Search for a customer and choose one to see their details.",
+      "erased": "Erased customer",
+      "linked": "Has an online account",
+      "notLinked": "No online account",
+      "deactivate": "Deactivate",
+      "reactivate": "Reactivate",
+      "erase": "Erase data",
+      "statuses": {
+        "ACTIVE": "Active",
+        "DEACTIVATED": "Deactivated",
+        "ERASED": "Erased"
+      },
+      "confirm": {
+        "deactivate": {
+          "title": "Deactivate {{name}}?",
+          "message": "{{name}} won't be able to make new bookings. Their data and existing appointments are kept."
+        },
+        "erase": {
+          "title": "Erase {{name}}'s data?",
+          "message": "This removes {{name}}'s name and contact details for good and cancels their upcoming appointments. It can't be undone."
+        }
+      },
+      "done": {
+        "deactivate": "Customer deactivated.",
+        "reactivate": "Customer reactivated.",
+        "erase": "Customer data erased."
+      },
+      "errors": {
+        "EMAIL_IN_USE": "Another customer already has this email address."
+      },
+      "managerActions": "Branch manager actions"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "none": "No notifications for this appointment.",
+      "failedIntro": "Messages that could not be delivered in the last 30 days. Check the customer's contact details, then send again.",
+      "noneFailed": "No failed notifications in the last 30 days.",
+      "created": "Created",
+      "type": "Type",
+      "status": "Status",
+      "channels": "Channels",
+      "attempts": "{{n}} attempts",
+      "appointment": "Appointment",
+      "resend": "Send again",
+      "resent": "Sending again. The new message is pending.",
+      "types": {
+        "CONFIRMATION": "Confirmation",
+        "RESCHEDULED": "Rescheduled",
+        "CANCELLATION": "Cancellation",
+        "REBOOKING_REQUIRED": "New time needed",
+        "REMINDER": "Reminder"
+      },
+      "statuses": {
+        "PENDING": "Pending",
+        "SENT": "Sent",
+        "FAILED": "Failed",
+        "SKIPPED": "Skipped",
+        "CANCELLED": "Cancelled"
+      },
+      "reasons": {
+        "CUSTOMER_UNAVAILABLE": "Customer details unavailable",
+        "NO_CHANNEL": "No channel to use",
+        "APPOINTMENT_CHANGED": "The appointment changed",
+        "TOO_LATE": "Too late to send"
+      },
+      "deliveries": {
+        "RETRYING": "retrying",
+        "SENT": "sent",
+        "FAILED": "failed",
+        "DELIVERED": "delivered",
+        "BOUNCED": "bounced"
+      }
+    },
+    "overbooked": {
+      "intro": "Days where more appointments are booked than the capacity allows, for the next three months. Choose who moves; the customer is asked to pick a new time.",
+      "none": "No overbooked days in the next three months.",
+      "load": "{{load}} booked for {{capacity}} places",
+      "displace": "Move out"
+    },
+    "impact": {
+      "title": "This change affects existing appointments",
+      "message": "{{displaced}} appointment(s) will need a new time and {{overbooked}} interval(s) will be overbooked. Save anyway?",
+      "confirm": "Save anyway"
+    },
+    "hours": {
+      "save": "Save hours",
+      "undo": "Undo changes",
+      "from": "From",
+      "to": "To",
+      "addRange": "Add hours",
+      "removeRange": "Remove hours",
+      "errors": {
+        "missing": "Fill in both times.",
+        "endBeforeStart": "The end must be after the start.",
+        "overlap": "The hours overlap."
+      }
+    },
+    "capacity": {
+      "pools": "Capacity pools",
+      "poolsIntro": "How many customers the branch can serve at the same time. Services share the pool they are offered in.",
+      "noPools": "No capacity pools yet. Add one before offering services.",
+      "poolName": "Pool name",
+      "baseCapacity": "Places",
+      "addPool": "Add pool",
+      "offerings": "Services offered",
+      "noOfferings": "The branch offers no services yet.",
+      "service": "Service",
+      "pool": "Pool",
+      "duration": "Duration (minutes)",
+      "durationHint": "Empty: the service's default",
+      "slotInterval": "Start every (minutes)",
+      "leadTime": "Book at least (minutes ahead)",
+      "maxAdvance": "Book at most (days ahead)",
+      "state": "State",
+      "active": "Offered",
+      "withdrawn": "Withdrawn",
+      "days": "{{days}} days",
+      "withdraw": "Withdraw",
+      "withdrawTitle": "Withdraw this service?",
+      "withdrawMessage": "{{service}} will no longer be bookable at this branch. Existing appointments stay.",
+      "offerService": "Offer a service",
+      "changeOffering": "Change {{service}}",
+      "retiredService": "Retired service"
+    },
+    "calendar": {
+      "exceptions": "Closed days and special hours",
+      "noExceptions": "No exceptions from today on.",
+      "addException": "Add an exception",
+      "date": "Date",
+      "type": "Type",
+      "closed": "Closed",
+      "specialHours": "Special hours",
+      "hoursRequired": "Give the special opening hours.",
+      "reason": "Reason",
+      "overrides": "Capacity overrides",
+      "noOverrides": "No capacity overrides from today on.",
+      "addOverride": "Add a capacity override",
+      "capacity": "Places",
+      "capacityOf": "{{capacity}} places",
+      "wholeDay": "Whole day",
+      "note": "Note",
+      "save": "Check impact and save",
+      "removeTitle": "Remove this entry?",
+      "removeException": "The exception on {{date}} will be removed and the usual hours apply.",
+      "removeOverride": "The capacity override on {{date}} will be removed and the usual capacity applies.",
+      "reasons": {
+        "SHORT_STAFFED": "Short-staffed",
+        "LEAVE": "Leave",
+        "TRAINING": "Training",
+        "OUTAGE": "Outage",
+        "EXTRA_STAFF": "Extra staff",
+        "OTHER": "Other"
+      }
+    },
+    "services": {
+      "retired": "Retired",
+      "retire": "Retire",
+      "retireTitle": "Retire {{name}}?",
+      "retireMessage": "{{name}} can no longer be offered or receive services. Existing offerings and appointments stay.",
+      "noServices": "No services in this category.",
+      "moveTo": "Move to category",
+      "addCategory": "Add a category",
+      "addService": "Add a service",
+      "name": "Name",
+      "segment": "Customer segment",
+      "category": "Category",
+      "duration": "Default duration (minutes)",
+      "description": "Description",
+      "editDetails": "Edit details",
+      "editDetailsOf": "Description and what to bring for {{name}}",
+      "prerequisites": "What to bring",
+      "prerequisitesHint": "One item per line, at most 10."
+    },
+    "staff": {
+      "invite": "Invite a staff member",
+      "sendInvite": "Send invitation",
+      "invited": "{{name}} is invited. We're emailing {{email}} a link to set up their sign-in.",
+      "invitedHint": "The link verifies their email and has them choose a password and an authenticator app. It works for 14 days; use Invite again for a new one. If they already have an account, they sign in as usual.",
+      "displayName": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "any": "Any",
+      "none": "No staff members match.",
+      "expires": "Invitation expires {{date}}",
+      "access": "Role",
+      "changeAccess": "Role of {{name}}",
+      "changeLog": "Change log",
+      "reinvite": "Invite again",
+      "suspend": "Suspend",
+      "reinstate": "Reinstate",
+      "remove": "Remove",
+      "roles": {
+        "BRANCH_STAFF": "Branch staff",
+        "BRANCH_MANAGER": "Branch manager"
+      },
+      "statuses": {
+        "INVITED": "Invited",
+        "ACTIVE": "Active",
+        "SUSPENDED": "Suspended",
+        "REMOVED": "Removed"
+      },
+      "actions": {
+        "INVITED": "Invited",
+        "REINVITED": "Invited again",
+        "ACTIVATED": "Signed up",
+        "ROLE_CHANGED": "Role changed",
+        "SUSPENDED": "Suspended",
+        "REINSTATED": "Reinstated",
+        "REMOVED": "Removed"
+      },
+      "confirm": {
+        "suspend": {
+          "title": "Suspend {{name}}?",
+          "message": "{{name}} loses staff access until reinstated. Their own customer bookings stay."
+        },
+        "remove": {
+          "title": "Remove {{name}}?",
+          "message": "{{name}} loses staff access for good. Their sign-in account is kept for any customer bookings."
+        }
+      },
+      "done": {
+        "reinvite": "Invitation renewed for 14 days and emailed again.",
+        "suspend": "Staff member suspended.",
+        "reinstate": "Staff member reinstated.",
+        "remove": "Staff member removed."
+      },
+      "errors": {
+        "EMAIL_IN_USE": "A staff member with this email already exists.",
+        "SELF_CHANGE_NOT_ALLOWED": "You can't change your own access.",
+        "INVALID_STATE": "This can't be done in the staff member's current status.",
+        "LAST_BRANCH_MANAGER": "The last branch manager can't be changed or removed."
+      }
+    },
+    "bookingErrors": {
+      "CUSTOMER_INACTIVE": "This customer is deactivated and can’t be booked.",
+      "OVERLAPPING_APPOINTMENT": "The customer already has an appointment at that time.",
+      "TOO_MANY_APPOINTMENTS": "The customer has reached the limit of upcoming appointments."
+    }
+  }
+}
